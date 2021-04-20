@@ -30,6 +30,9 @@ jobs:
             npm install gh-pages --save-dev
             git config user.email "epokweb@hotmail.fr"
             git config user.name "Emmanuel97423"
+      - add_ssh_keys:
+          fingerprints:
+            - 'f9:c3:61:32:3d:88:ef:10:5c:4a:a2:52:cd:32:64:2a'
       - run:
           name: Deploy docs to gh-pages branch
           command: './node_modules/.bin/gh-pages --dotfiles --message "[skip ci] Updates" -d dist'
