@@ -7,7 +7,7 @@
           <a href="" class="uppercase">{{ game.name }}</a>
         </div>
         <div id="game-vote"><span>VOTE</span></div>
-        <div class="flex justify-self-end gap-5 ml-32">
+        <div class="flex justify-self-end items-center gap-4 ml-32">
           <input
             type="search"
             class="self-center h-8 border bg-gray-700 focus:border border-gray-600 outline-none p-2 text-white appearance-none"
@@ -15,16 +15,9 @@
           />
           <button class="self-center text-white">search</button>
           <icon class="self-center text-white">icon</icon>
-
-          <div
-            class="uppercase py-2 px-4 login--button self-center text-white border-gray-700 text-xs"
-          >
-            Connexion
-          </div>
-          <div
-            class="uppercase -ml-3.5 py-2 px-4 login--button self-center text-white border-gray-700 text-xs"
-          >
-            S'inscrire
+          <div class="flex gap-2">
+            <Button>Connexion</Button>
+            <Button type="red-gradient">S'inscrire</Button>
           </div>
         </div>
       </div>
@@ -34,10 +27,12 @@
 
 <script>
 import VulcainLogo from '@/components/Logo'
+import Button from '@/components/buttons/Button'
 export default {
   name: 'TopNavBar',
   components: {
     VulcainLogo,
+    Button,
   },
   data() {
     return {
@@ -112,10 +107,7 @@ input[type='search']::-webkit-search-results-button,
 input[type='search']::-webkit-search-results-decoration {
   -webkit-appearance: none;
 }
-.login--button {
-  font-family: 'Roboto';
-  border-width: 0.01em;
-  font-weight: 700;
-  font-style: italic;
+input {
+  font-weight: 200;
 }
 </style>
