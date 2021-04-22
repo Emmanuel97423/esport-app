@@ -1,18 +1,13 @@
 <template>
-  <div class="flex justify-center bg-primary w-full h-16">
-    <div class="flex bg-primary w-5/6 h-16">
+  <div class="flex justify-around w-full bg-primary">
+    <div class="flex w-auto h-16">
       <VulcainLogo class="self-center w-12"></VulcainLogo>
-      <div class="flex justify-between w-full h-full ml-6">
-        <ul class="flex gap-8">
-          <a href="" class="">JEUX</a>
-          <a href="" class="">DBFZ</a>
-          <a href="" class="">MK11</a>
-          <a href="" class="">COD</a>
-          <a href="" class="">FORTNITE</a>
-          <a href="" class="">FUTUR JEU</a>
-          <div id="game-vote"><span>VOTE</span></div>
-        </ul>
-        <div class="flex justify-self-end ml-8 gap-5">
+      <div class="flex place-content-between w-auto h-full gap-7">
+        <div v-for="game in menuGames" :key="game.id" class="flex">
+          <a href="" class="uppercase">{{ game.name }}</a>
+        </div>
+        <div id="game-vote"><span>VOTE</span></div>
+        <div class="flex justify-self-end gap-5 ml-32">
           <input
             type="search"
             class="self-center h-8 border bg-gray-700 focus:border border-gray-600 outline-none p-2 text-white appearance-none"
@@ -44,6 +39,36 @@ export default {
   components: {
     VulcainLogo,
   },
+  data() {
+    return {
+      menuGames: {
+        allGame: {
+          name: 'Jeux',
+          type: 'linkAllGame',
+        },
+        game1: {
+          name: 'dbfz',
+          type: 'versus',
+        },
+        game2: {
+          name: 'Mk11',
+          type: 'versus',
+        },
+        game3: {
+          name: 'Cod',
+          type: 'versus',
+        },
+        game4: {
+          name: 'Fortnite',
+          type: 'versus',
+        },
+        linkVote: {
+          name: 'Futur jeu',
+          url: '#',
+        },
+      },
+    }
+  },
 }
 </script>
 
@@ -62,7 +87,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 8px 0 0 -25px;
+  margin: 8px 0 0 -15px;
   text-align: center;
   font-size: 0.7rem;
   font-weight: 700;
