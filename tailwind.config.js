@@ -13,6 +13,8 @@ export default {
       secondary: '#293133',
       tercary: '#474f40',
       danger: '#B36700',
+      blueGray: '#11102A',
+      ligthBlue: '#1E1D35',
     }),
     textColor: (theme) => theme('colors'),
     textColor: {

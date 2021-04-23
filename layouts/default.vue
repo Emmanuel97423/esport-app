@@ -10,6 +10,17 @@ export default {
   components: {
     TopNavBar,
   },
+  data() {
+    return {
+      gameMenu: {
+        accueil: 'Accueil',
+        tournament: 'Tournament',
+        news: 'News',
+        vods: 'VODs',
+        ranking: '',
+      },
+    }
+  },
 }
 </script>
 <style>
