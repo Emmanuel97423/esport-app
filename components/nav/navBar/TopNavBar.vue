@@ -4,7 +4,7 @@
       <VulcainLogo class="self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
         <div v-for="game in menuGames" :key="game.id" class="flex">
-          <a href="" class="uppercase">{{ game.name }}</a>
+          <NuxtLink class="link uppercase" to="game">{{ game.name }}</NuxtLink>
         </div>
         <div id="game-vote"><span>VOTE</span></div>
         <div class="flex justify-self-end items-center gap-4 ml-32">
@@ -60,6 +60,7 @@ export default {
         linkVote: {
           name: 'Futur jeu',
           url: '#',
+          backgroundImage: '',
         },
       },
     }
@@ -69,7 +70,7 @@ export default {
 
 <style scoped>
 li,
-a {
+.link {
   font-family: 'Roboto';
   font-style: italic;
   font-weight: 500;
