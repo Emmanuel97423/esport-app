@@ -4,7 +4,9 @@
       <VulcainLogo class="self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
         <div v-for="game in menuGames" :key="game.id" class="flex">
-          <NuxtLink class="link uppercase" to="game">{{ game.name }}</NuxtLink>
+          <NuxtLink class="link uppercase" to="/game/mk11">{{
+            game.name
+          }}</NuxtLink>
         </div>
         <div id="game-vote"><span>VOTE</span></div>
         <div class="flex justify-self-end items-center gap-4 ml-32">
