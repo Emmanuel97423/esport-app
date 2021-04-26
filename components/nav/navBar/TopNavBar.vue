@@ -3,8 +3,15 @@
     <div class="flex w-auto h-16">
       <VulcainLogo class="self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
-        <div v-for="game in menuGames" :key="game.id" class="flex">
-          <NuxtLink class="link uppercase" to="game">{{ game.name }}</NuxtLink>
+        <div class="flex gap-7">
+          <NuxtLink class="link uppercase" to="/game/allGame"
+            >Tous les jeux</NuxtLink
+          >
+          <NuxtLink class="link uppercase" to="/game/mk11/home">Mk11</NuxtLink>
+          <NuxtLink class="link uppercase" to="/game/dbfz">dbfz</NuxtLink>
+          <NuxtLink class="link uppercase" to="/game/game-vote"
+            >Future jeu</NuxtLink
+          >
         </div>
         <div id="game-vote"><span>VOTE</span></div>
         <div class="flex justify-self-end items-center gap-4 ml-32">
