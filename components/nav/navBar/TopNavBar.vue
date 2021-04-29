@@ -1,16 +1,23 @@
 <template>
-  <div class="flex justify-around w-full bg-primary">
-    <div class="flex w-auto h-16">
+  <div class="box flex justify-center w-full bg-primary">
+    <div class="flex h-16">
       <VulcainLogo class="self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
-        <div v-for="game in menuGames" :key="game.id" class="flex">
-          <NuxtLink class="link uppercase" to="game">{{ game.name }}</NuxtLink>
+        <div class="flex gap-7">
+          <NuxtLink class="link uppercase" to="/game/allGame"
+            >Tous les jeux</NuxtLink
+          >
+          <NuxtLink class="link uppercase" to="/game/mk11/">Mk11</NuxtLink>
+          <NuxtLink class="link uppercase" to="/game/dbfz">dbfz</NuxtLink>
+          <NuxtLink class="link uppercase" to="/game/game-vote"
+            >Future jeu</NuxtLink
+          >
         </div>
         <div id="game-vote"><span>VOTE</span></div>
         <div class="flex justify-self-end items-center gap-4 ml-32">
           <input
             type="search"
-            class="self-center h-8 border bg-gray-700 focus:border border-gray-600 outline-none p-2 text-white appearance-none"
+            class="self-center h-8 border bg-white focus:border border-gray-600 outline-none p-2 text-white appearance-none"
             placeholder="Tournoi, joueurs..."
           />
           <button class="self-center text-white">search</button>
@@ -73,7 +80,7 @@ li,
 .link {
   font-family: 'Roboto';
   font-style: italic;
-  font-weight: 500;
+  font-weight: 900;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,5 +117,7 @@ input[type='search']::-webkit-search-results-decoration {
 }
 input {
   font-weight: 200;
+  appearance: none;
+  border: none;
 }
 </style>

@@ -1,14 +1,20 @@
 <template>
   <div>
-    <TopNavBar></TopNavBar>
+    <div class="navBar">
+      <flashResult></flashResult>
+      <TopNavBar></TopNavBar>
+    </div>
+
     <Nuxt />
   </div>
 </template>
 <script>
+import FlashResult from '@/components/game/FlashResultComponent'
 import TopNavBar from '../components/nav/navBar/TopNavBar'
 export default {
   components: {
     TopNavBar,
+    FlashResult,
   },
   data() {
     return {
@@ -34,7 +40,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
-  background-color: #ffff;
+  background: rgb(255, 255, 255);
 }
 
 *,
@@ -42,6 +48,10 @@ html {
 *::after {
   box-sizing: border-box;
   margin: 0;
+}
+
+.navBar {
+  position: fix;
 }
 
 .button--green {
