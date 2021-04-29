@@ -29,7 +29,7 @@ export default {
       },
       event: {
         name: 'SALT SERIES',
-        mainCard: 'TBK KillJoy Vs. ILLUSION MarkTheShark',
+        mainCard: 'MarkTheShark Vs. KillJoy',
         fightCard: '#',
         organizer: 'Charlie Wolff Gaming',
       },

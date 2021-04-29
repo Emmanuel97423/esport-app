@@ -11,7 +11,9 @@
         <p>{{ event.organizer }} presente</p>
         <h1>{{ event.name }}</h1>
       </div>
-      <div class="box__subtitle"><h2>MarkTheShark Vs. Killjoy</h2></div>
+      <div class="box__subtitle">
+        <h2>{{ event.mainCard }}</h2>
+      </div>
       <div class="box__button">
         <ButtonComponent class="box__btn btn__figthCard" type="red-gradient"
           >Voir la fight card</ButtonComponent
