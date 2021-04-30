@@ -382,7 +382,7 @@ export default {
   display: block;
   width: 20px;
   height: 20px;
-  padding: 0 0 0 15px;
+
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   cursor: pointer;
@@ -413,7 +413,7 @@ export default {
   display: block;
   width: 20px;
   height: 20px;
-  padding: 0 15px 0 0;
+
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   cursor: pointer;

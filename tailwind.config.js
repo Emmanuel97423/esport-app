@@ -29,7 +29,6 @@ export default {
     },
     extend: {
       backgroundImage: (theme) => ({
-        'bg-login': "url('@/assets/images/background/login/Hero_still.jpg')",
         'hero-pattern': "url('/img/hero-pattern.svg')",
         'footer-texture': "url('/img/footer-texture.png')",
       }),

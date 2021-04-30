@@ -44,9 +44,9 @@ export default {
   height: 70vh;
   display: flex;
   background: black;
-
   justify-content: center;
   align-items: flex-start;
+
   &__credits {
     display: flex;
     flex-direction: column;
@@ -76,8 +76,11 @@ export default {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 5rem;
     text-transform: uppercase;
+    text-align: center;
   }
-  &__image > img {
+  &__image {
+    width: 100%;
+    height: 100%;
     opacity: 0.3;
     z-index: 0;
     object-fit: cover;

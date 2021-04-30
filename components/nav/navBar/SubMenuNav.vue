@@ -43,6 +43,7 @@ export default {
   color: black;
 }
 .box {
+  width: 100%;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }

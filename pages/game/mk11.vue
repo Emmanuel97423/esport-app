@@ -2,10 +2,14 @@
   <div>
     <SubMenu :game="game" class="subMenu"></SubMenu>
     <Slide :event="event"></Slide>
+    <div>
+      <EventCard></EventCard>
+    </div>
   </div>
 </template>
 <script>
 import SubMenu from '@/components/nav/navBar/SubMenuNav'
+import EventCard from '@/components/game/EventCard'
 //  import FlashResult from '@/components/game/FlashResult'
 import Slide from '@/components/slide/SlideShow'
 export default {
@@ -13,6 +17,7 @@ export default {
   components: {
     SubMenu,
     Slide,
+    EventCard,
     //  FlashResult,
   },
   asyncData() {

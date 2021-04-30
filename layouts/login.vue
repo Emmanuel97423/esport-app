@@ -1,5 +1,5 @@
 <template>
-  <div class="h-auto bg-bg-login bg-cover">
+  <div class="h-auto">
     <Nuxt />
   </div>
 </template>
