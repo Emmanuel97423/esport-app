@@ -1,6 +1,6 @@
 <template>
   <div class="box flex justify-center w-full bg-primary">
-    <div class="flex h-16">
+    <div class="box__content flex h-16">
       <VulcainLogo class="self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
         <div class="flex gap-7">
@@ -76,6 +76,11 @@ export default {
 </script>
 
 <style scoped>
+.box__content {
+  @media (max-width: 40rem) {
+    display: none;
+  }
+}
 li,
 .link {
   font-family: 'Roboto';

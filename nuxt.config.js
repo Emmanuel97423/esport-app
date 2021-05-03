@@ -47,6 +47,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    ['nuxt-mq'],
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -68,5 +69,13 @@ export default {
   //PLUGIN SASS
   styleResources: {
     scss: ['./assets/scss/*.scss'],
+  },
+  mq: {
+    defaultBreakpoint: 'sm',
+    breakpoints: {
+      sm: 450,
+      md: 1250,
+      lg: Infinity,
+    },
   },
 }

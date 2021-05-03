@@ -2,7 +2,8 @@
   <div>
     <div class="navBar">
       <flashResult></flashResult>
-      <TopNavBar></TopNavBar>
+      <TopNavBar v-if="$mq === 'lg'"></TopNavBar>
+      <TopNavBarResponsive v-if="$mq === 'md'"></TopNavBarResponsive>
     </div>
 
     <Nuxt />
@@ -10,13 +11,15 @@
 </template>
 <script>
 import FlashResult from '@/components/game/FlashResultComponent'
-import TopNavBar from '../components/nav/navBar/TopNavBar'
+import TopNavBar from '@/components/nav/navBar/TopNavBar'
+import TopNavBarResponsive from '@/components/nav/navBar/TopNavBarResponsive'
 export default {
   components: {
     TopNavBar,
     FlashResult,
+    TopNavBarResponsive,
   },
-  data() {
+  asyncData() {
     return {
       gameMenu: {
         accueil: 'Accueil',

@@ -41,11 +41,14 @@ export default {
 <style lang="scss" scoped>
 .box {
   width: 100%;
-  height: 70vh;
+  height: 65vh;
   display: flex;
   background: black;
   justify-content: center;
   align-items: flex-start;
+  @media (max-width: 768px) {
+    height: auto;
+  }
 
   &__credits {
     display: flex;
@@ -67,9 +70,18 @@ export default {
     font-weight: bold;
     color: white;
     transform: translateY(50%);
+
     h1 {
       font-family: 'Open Sans Condensed', sans-serif;
-      font-size: 3rem;
+      font-size: 5rem;
+      transition: 0.5s ease-in-out;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+    @media (max-width: 768px) {
+      transform: translateY(20%);
+      font-size: 1rem;
     }
   }
   &__subtitle {
@@ -77,6 +89,9 @@ export default {
     font-size: 5rem;
     text-transform: uppercase;
     text-align: center;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
   }
   &__image {
     width: 100%;

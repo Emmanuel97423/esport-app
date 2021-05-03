@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SubMenu :game="game" class="subMenu"></SubMenu>
+    <SubMenu :game="game" v-if="$mq === 'lg'" class="subMenu"></SubMenu>
     <Slide :event="event"></Slide>
     <div>
       <EventCard></EventCard>

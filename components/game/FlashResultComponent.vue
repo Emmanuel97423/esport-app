@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center w-full carrousel">
     <div>
-      <button class="btn--prev" @click="showPrev">show me the previous</button>
+      <button class="btn--prev" @click="showPrev"></button>
     </div>
     <VueSlickCarousel
       ref="carousel"
@@ -65,7 +65,7 @@
       </div>
     </VueSlickCarousel>
     <div>
-      <button class="btn--next" @click="showNext">Next</button>
+      <button class="btn--next" @click="showNext"></button>
     </div>
   </div>
 </template>
@@ -372,67 +372,7 @@ export default {
 .winner {
   color: black;
 }
-.btn--next {
-  outline: none;
-  background: transparent;
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 6%;
-  display: block;
-  width: 20px;
-  height: 20px;
 
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  cursor: pointer;
-  border: none;
-  right: 1.5rem;
-}
-.btn--next::before {
-  margin: 0 10px 0 0;
-  color: black;
-  opacity: 1;
-  content: '→';
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-  opacity: 0.75;
-  text-decoration: inherit;
-  vertical-align: inherit;
-  transform: translateY(-50%);
-}
-.btn--prev {
-  outline: none;
-  background: transparent;
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 6%;
-  display: block;
-  width: 20px;
-  height: 20px;
-
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  cursor: pointer;
-  border: none;
-  left: 1.5rem;
-}
-.btn--prev::before {
-  color: black;
-  opacity: 1;
-  content: '←';
-  font-family: roboto;
-  font-size: 20px;
-  font-weight: bold;
-  line-height: 1;
-  opacity: 0.75;
-  text-decoration: inherit;
-  vertical-align: inherit;
-  transform: translateY(-50%);
-}
 .slickCar {
   width: 95%;
 }
