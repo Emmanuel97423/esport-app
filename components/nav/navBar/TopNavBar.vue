@@ -2,6 +2,7 @@
   <div class="box flex justify-center w-full bg-primary">
     <div class="box__content flex h-16">
       <font-awesome-icon
+        v-if="$mq === 'sm'"
         class="font-awesome-icon"
         icon="bars"
       ></font-awesome-icon>
