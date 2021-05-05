@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{301:function(n,e,l){"use strict";l.r(e);var c={name:"SocialBlock"},t=l(8),component=Object(t.a)(c,(function(){var n=this,e=n.$createElement;return(n._self._c||e)("div",[n._v("this is a social block")])}),[],!1,null,null,null);e.default=component.exports}}]);
