@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="navBar">
-      <flashResult></flashResult>
-      <TopNavBar v-if="$mq === 'lg'"></TopNavBar>
+      <flashResult v-if="$mq === 'md'" class="flashResult"></flashResult>
+      <flashResult v-if="$mq === 'lg'" class="flashResult"></flashResult>
+      <TopNavBar></TopNavBar>
+      <TopNavBarResponsive v-if="$mq === 'sm'"></TopNavBarResponsive>
       <TopNavBarResponsive v-if="$mq === 'md'"></TopNavBarResponsive>
     </div>
 
@@ -32,7 +34,7 @@ export default {
   },
 }
 </script>
-<style>
+<style lang="scss">
 html {
   font-family: 'Roboto', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -55,7 +57,7 @@ html {
 }
 
 .navBar {
-  position: fix;
+  width: 100%;
 }
 
 .button--green {

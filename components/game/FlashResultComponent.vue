@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center w-full carrousel">
+  <div class="box__container flex justify-center w-full carrousel">
     <div>
       <button class="btn--prev" @click="showPrev"></button>
     </div>
@@ -196,7 +196,7 @@ export default {
             settings: {
               slidesToShow: 4,
               slidesToScroll: 4,
-              initialSlide: 4,
+              initialSlide: 1,
             },
           },
           {
@@ -213,7 +213,7 @@ export default {
             settings: {
               slidesToShow: 2,
               slidesToScroll: 2,
-              initialSlide: 2,
+              initialSlide: 1,
             },
           },
           {
@@ -221,6 +221,7 @@ export default {
             settings: {
               slidesToShow: 1,
               slidesToScroll: 1,
+              initialSlide: 1,
             },
           },
         ],
@@ -238,7 +239,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .box--result__section {
   margin-right: 0;
   border-right: 1px solid #37364c;
@@ -259,6 +260,9 @@ export default {
   min-width: 16rem;
   max-width: 19rem;
   padding: 1rem;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 .box--title__event {
   margin-bottom: 1rem;
