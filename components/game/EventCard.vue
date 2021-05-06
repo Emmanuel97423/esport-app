@@ -195,6 +195,11 @@ export default {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      @media (max-width: 768px) {
+        width: 88%;
+        margin: 1rem 0 0 0;
+        text-align: center;
+      }
 
       > .btn {
         border: 1px solid #9999a9;
