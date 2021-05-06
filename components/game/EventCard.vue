@@ -163,6 +163,11 @@ export default {
     -webkit-box-shadow: 2px -1px 52px 11px rgba(201, 201, 201, 1);
     -moz-box-shadow: 2px -1px 52px 11px rgba(201, 201, 201, 1);
     box-shadow: 2px -1px 52px 11px rgba(201, 201, 201, 1);
+    @media (max-width: 768px) {
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
   }
   &__event {
     &--logo {
@@ -180,7 +185,9 @@ export default {
       color: black;
       h3 {
         text-transform: uppercase;
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        font-family: 'Roboto';
+        font-weight: 700;
       }
       p {
         font-size: 0.9rem;
