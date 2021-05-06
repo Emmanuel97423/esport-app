@@ -44,7 +44,7 @@
           <span class="box__event--infos-versus">Vs.</span>
           {{ slot.participant2.name }}
         </h3>
-        <span>Sun, May 9 / 4:00 AM +04 / Main Card</span>
+        <span>Sun, May 9 / 4:00 AM +04 / {{ slot.match }}</span>
         <p>Online</p>
         <p>Format: FT7</p>
       </div>
@@ -76,6 +76,7 @@ export default {
                 participant2: {
                   name: 'ValveOverKill',
                 },
+                match: 'Main Event',
               },
               id12345: {
                 participant1: {
@@ -84,6 +85,7 @@ export default {
                 participant2: {
                   name: 'KillJoy',
                 },
+                match: 'Prélims',
               },
               id123456: {
                 participant1: {
@@ -92,6 +94,7 @@ export default {
                 participant2: {
                   name: 'ParaSurama',
                 },
+                match: 'Prélims',
               },
               id1234567: {
                 participant1: {
@@ -100,6 +103,7 @@ export default {
                 participant2: {
                   name: 'Bliono',
                 },
+                match: 'Prélims',
               },
             },
           },
