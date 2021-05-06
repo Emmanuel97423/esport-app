@@ -199,10 +199,14 @@ export default {
         width: 88%;
         margin: 1rem 0 0 0;
         text-align: center;
+        border: 1px solid #e2e2e2;
       }
 
       > .btn {
         border: 1px solid #9999a9;
+        @media (max-width: 768px) {
+          border: none;
+        }
       }
     }
   }
