@@ -12,11 +12,25 @@
           alt=""
         />
       </div>
-      <div class="box__event--img">
-        <img
-          :src="require('@/assets/images/slide/kollisionKourse.jpeg')"
-          alt=""
-        />
+      <div class="box__event--player-container">
+        <div class="box__event--fight-narrow">
+          <div class="box__event--carrousel">
+            <div class="box__event--carrousel-content">
+              <button class="slick__prev"></button>
+              <div class="slick__list">
+                <img
+                  :src="require('@/assets/images/users/avatar_1.png')"
+                  alt=""
+                />
+                <img
+                  :src="require('@/assets/images/users/avatar_2.png')"
+                  alt=""
+                />
+              </div>
+              <button class="slick__forward"></button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="box__event--infos">
         <h3>Mr5000 VS ValveOverKil</h3>
@@ -71,10 +85,12 @@ export default {
   }
   &__content {
     width: 85%;
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin-top: 5rem;
+
     @media (max-width: 768px) {
       flex-direction: column;
       align-items: center;
@@ -83,11 +99,12 @@ export default {
   }
   &__event {
     &--logo {
-      width: 90px;
+      width: 150px;
     }
     &--img {
       width: 460px;
       height: 160px;
+
       @media (max-width: 768px) {
         width: 100%;
       }
