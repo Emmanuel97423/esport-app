@@ -1,11 +1,9 @@
 <template>
   <div class="box">
     <div class="box__image">
-      <img
-        :src="require('@/assets/images/slide/mortal-kombat-face-to-face.jpg')"
-        alt=""
-      />
+      <img :src="require('@/assets/images/slide/' + event.bannerUrl)" alt="" />
     </div>
+
     <div class="box__title">
       <div class="box__credits">
         <p>{{ event.organizer }} presente</p>

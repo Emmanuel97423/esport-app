@@ -188,6 +188,7 @@ export default {
         font-size: 1.4rem;
         font-family: 'Roboto';
         font-weight: 700;
+        margin: 0 0 0.8rem 0;
       }
       p {
         font-size: 0.9rem;

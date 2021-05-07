@@ -20,7 +20,7 @@ export default {
     EventCard,
     //  FlashResult,
   },
-  asyncData() {
+  data() {
     return {
       game: {
         menu: {
@@ -29,7 +29,7 @@ export default {
           ranking: 'Ranking',
           vods: 'VODs',
           news: 'News',
-          logoUrl: ' @/assets/images/game-logo/Mortal-Kombat-Embleme.png',
+          logoUrl: ' Mortal-Kombat-Embleme.png',
         },
       },
       event: {
@@ -37,6 +37,7 @@ export default {
         mainCard: 'MarkTheShark Vs. KillJoy',
         fightCard: '#',
         organizer: 'Charlie Wolff Gaming',
+        bannerUrl: 'mortal-kombat-face-to-face.jpg',
       },
     }
   },
