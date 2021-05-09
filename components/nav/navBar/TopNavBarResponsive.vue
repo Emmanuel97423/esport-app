@@ -6,6 +6,9 @@
           <NuxtLink class="box__menu--link uppercase" to="/game/mk11"
             >Mk11</NuxtLink
           >
+          <NuxtLink class="box__menu--link uppercase" to="/game/dbfz"
+            >DBFZ</NuxtLink
+          >
         </div>
         <ul class="box__menu--dropdown">
           <li class="box__menu--item"></li>
