@@ -3,7 +3,7 @@
     <SubMenu :game="game" v-if="$mq === 'lg'" class="subMenu"></SubMenu>
     <Slide :event="event"></Slide>
     <div>
-      <EventCard></EventCard>
+      <EventCard :event="event"></EventCard>
     </div>
   </div>
 </template>
@@ -38,6 +38,50 @@ export default {
         fightCard: '#',
         organizer: 'Charlie Wolff Gaming',
         bannerUrl: 'mortal-kombat-face-to-face.jpg',
+        eventPhase: {
+          phase: {
+            mainCard: {
+              slots: {
+                id1234: {
+                  participant1: {
+                    name: 'Mr.5000',
+                  },
+                  participant2: {
+                    name: 'ValveOverKill',
+                  },
+                  match: 'Main Event',
+                },
+                id12345: {
+                  participant1: {
+                    name: 'MarkTheShark',
+                  },
+                  participant2: {
+                    name: 'KillJoy',
+                  },
+                  match: 'Prélims',
+                },
+                id123456: {
+                  participant1: {
+                    name: 'Epok',
+                  },
+                  participant2: {
+                    name: 'ParaSurama',
+                  },
+                  match: 'Prélims',
+                },
+                id1234567: {
+                  participant1: {
+                    name: 'Atrocy ZA',
+                  },
+                  participant2: {
+                    name: 'Bliono',
+                  },
+                  match: 'Prélims',
+                },
+              },
+            },
+          },
+        },
       },
     }
   },

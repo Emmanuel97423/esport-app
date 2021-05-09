@@ -7,7 +7,7 @@
     <div class="box__subtitle--label">7 Tournois</div>
 
     <div
-      v-for="slot in event.phase.mainCard.slots"
+      v-for="slot in event.eventPhase.phase.mainCard.slots"
       :key="slot.id"
       class="box__content"
     >
@@ -62,54 +62,11 @@ export default {
   components: {
     Button,
   },
+  props: {
+    event: { type: Object, required: true },
+  },
   data() {
-    return {
-      text: 'hello',
-      event: {
-        phase: {
-          mainCard: {
-            slots: {
-              id1234: {
-                participant1: {
-                  name: 'Mr.5000',
-                },
-                participant2: {
-                  name: 'ValveOverKill',
-                },
-                match: 'Main Event',
-              },
-              id12345: {
-                participant1: {
-                  name: 'MarkTheShark',
-                },
-                participant2: {
-                  name: 'KillJoy',
-                },
-                match: 'Prélims',
-              },
-              id123456: {
-                participant1: {
-                  name: 'Epok',
-                },
-                participant2: {
-                  name: 'ParaSurama',
-                },
-                match: 'Prélims',
-              },
-              id1234567: {
-                participant1: {
-                  name: 'Atrocy ZA',
-                },
-                participant2: {
-                  name: 'Bliono',
-                },
-                match: 'Prélims',
-              },
-            },
-          },
-        },
-      },
-    }
+    return {}
   },
 }
 </script>

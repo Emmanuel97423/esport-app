@@ -1,7 +1,10 @@
 <template>
   <div class="box">
     <div class="box__image">
-      <img :src="require('@/assets/images/slide/' + event.bannerUrl)" alt="" />
+      <img
+        :src="require('@/assets/images/tournament/banner/' + event.bannerUrl)"
+        alt=""
+      />
     </div>
 
     <div class="box__title">
@@ -57,6 +60,9 @@ export default {
       font-size: 0.8rem;
       text-transform: uppercase;
       font-weight: 200;
+    }
+    h1 {
+      text-transform: uppercase;
     }
   }
   &__title {
