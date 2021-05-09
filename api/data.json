@@ -1,0 +1,35 @@
+{
+    "objectId": "a",
+    "name": "DBFZ Contest",
+    "adress": "Online",
+    "mainCard": {
+        "type": "FT7",
+        "slot1": "Kobi",
+        "slot2": "Actunoon"
+    },
+    "prelims": {
+        "type": "FT5",
+        "seed1": {
+            "slot1": "Rekwon",
+            "slot2": "K-TheSupreme"
+        },
+        "seed2": {
+            "slot1": "Driver",
+            "slot2": "Struggle"
+        },
+        "seed3": {
+            "slot1": "Kotoba",
+            "slot2": "Numb"
+        },
+        "seed4": {
+            "slot1": "TBK",
+            "slot2": "Struggle"
+        }
+    },
+    "organizer": "Shapless E-Sport",
+    "game": "DBFZ",
+    "dateBegin": "11 Av 2021",
+    "dateEnd": "12 Av 2021",
+    "hour": "20:00 + 04",
+    "bannerUrl": "@assets/images/tournament/banner/bdfz-banner.jpg"
+}

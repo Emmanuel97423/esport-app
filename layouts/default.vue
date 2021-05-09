@@ -9,17 +9,20 @@
     </div>
 
     <Nuxt />
+    <Footer></Footer>
   </div>
 </template>
 <script>
 import FlashResult from '@/components/game/FlashResultComponent'
 import TopNavBar from '@/components/nav/navBar/TopNavBar'
 import TopNavBarResponsive from '@/components/nav/navBar/TopNavBarResponsive'
+import Footer from '@/components/nav/navBar/Footer'
 export default {
   components: {
     TopNavBar,
     FlashResult,
     TopNavBarResponsive,
+    Footer,
   },
   asyncData() {
     return {

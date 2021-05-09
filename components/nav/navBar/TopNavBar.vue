@@ -9,9 +9,7 @@
       <VulcainLogo class="logo self-center w-12"></VulcainLogo>
       <div class="flex place-content-between w-auto h-full gap-7">
         <div v-if="$mq === 'lg'" class="box__menu flex gap-7">
-          <NuxtLink class="link uppercase" to="/game/allGame"
-            >Tous les jeux</NuxtLink
-          >
+          <NuxtLink class="link uppercase" to="/game/allGame">Arène</NuxtLink>
           <NuxtLink class="link uppercase" to="/game/mk11/">Mk11</NuxtLink>
           <NuxtLink class="link uppercase" to="/game/dbfz">dbfz</NuxtLink>
           <NuxtLink class="link uppercase" to="/game/game-vote"
