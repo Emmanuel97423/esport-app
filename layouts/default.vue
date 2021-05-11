@@ -9,6 +9,9 @@
     </div>
 
     <Nuxt />
+    <div class="box__blog">
+      <BlogBlock></BlogBlock>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -17,11 +20,13 @@ import FlashResult from '@/components/game/FlashResultComponent'
 import TopNavBar from '@/components/nav/navBar/TopNavBar'
 import TopNavBarResponsive from '@/components/nav/navBar/TopNavBarResponsive'
 import Footer from '@/components/nav/navBar/Footer'
+import BlogBlock from '@/components/blog/BlogBlock'
 export default {
   components: {
     TopNavBar,
     FlashResult,
     TopNavBarResponsive,
+    BlogBlock,
     Footer,
   },
   asyncData() {
@@ -90,5 +95,9 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+.box__blog {
+  display: flex;
+  justify-content: center;
 }
 </style>

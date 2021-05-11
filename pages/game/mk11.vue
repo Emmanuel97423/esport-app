@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SubMenu :game="game" v-if="$mq === 'lg'" class="subMenu"></SubMenu>
+    <SubMenu v-if="$mq === 'lg'" :apiMenu="apiMenu" class="subMenu"></SubMenu>
     <Slide :event="event"></Slide>
     <div>
       <EventCard :event="event"></EventCard>
@@ -10,6 +10,7 @@
 <script>
 import SubMenu from '@/components/nav/navBar/SubMenuNav'
 import EventCard from '@/components/game/EventCard'
+
 //  import FlashResult from '@/components/game/FlashResult'
 import Slide from '@/components/slide/SlideShow'
 export default {
@@ -18,20 +19,11 @@ export default {
     SubMenu,
     Slide,
     EventCard,
+
     //  FlashResult,
   },
   data() {
     return {
-      game: {
-        menu: {
-          home: 'Accueil',
-          events: 'Tournois',
-          ranking: 'Ranking',
-          vods: 'VODs',
-          news: 'News',
-          logoUrl: ' Mortal-Kombat-Embleme.png',
-        },
-      },
       event: {
         name: 'SALT SERIES',
         mainCard: 'MarkTheShark Vs. KillJoy',
@@ -83,7 +75,16 @@ export default {
           },
         },
       },
+      apiMenu: '',
     }
+  },
+  created() {
+    this.api()
+  },
+  methods: {
+    api() {
+      return (this.apiMenu = this.$store.getters['api/mk11Api'])
+    },
   },
 }
 </script>

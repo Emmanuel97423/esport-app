@@ -10,12 +10,13 @@
     <div class="flex justify-start w-10/12 bg-white -pr-24">
       <div class="flex z-10 w-10/12 h-11 ml-5">
         <div class="sub-menu flex relative w-11/12 h-full items-center gap-8">
-          <NuxtLink class="link" to="#">{{ game.menu.home }}</NuxtLink>
-          <NuxtLink class="link" to="#">{{ game.menu.events }}</NuxtLink>
-          <NuxtLink class="link" to="#">{{ game.menu.ranking }}</NuxtLink>
-          <NuxtLink class="link" to="#">{{ game.menu.vods }}</NuxtLink>
-          <NuxtLink class="link" to="#">{{ game.menu.news }}</NuxtLink>
+          <NuxtLink class="link" to="#">{{ apiMenu.menu.home }}</NuxtLink>
+          <NuxtLink class="link" to="#">{{ apiMenu.menu.events }}</NuxtLink>
+          <NuxtLink class="link" to="#">{{ apiMenu.menu.ranking }}</NuxtLink>
+          <NuxtLink class="link" to="#">{{ apiMenu.menu.vods }}</NuxtLink>
+          <NuxtLink class="link" to="#">{{ apiMenu.menu.news }}</NuxtLink>
         </div>
+
         <div class="w-2/12 self-center justify-self-start">
           <SocialBlock></SocialBlock>
         </div>
@@ -32,7 +33,7 @@ export default {
     SocialBlock,
   },
   props: {
-    game: { type: Object, required: true },
+    apiMenu: { type: Object, required: true },
   },
 }
 </script>

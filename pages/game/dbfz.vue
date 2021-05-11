@@ -1,7 +1,8 @@
 <template>
   <div>
-    <SubMenu :game="game" v-if="$mq === 'lg'" class="subMenu"></SubMenu>
+    <SubMenu v-if="$mq === 'lg'" :apiMenu="apiMenu" class="subMenu"></SubMenu>
     <Slide :event="event"></Slide>
+
     <div>
       <EventCard :event="event"></EventCard>
     </div>
@@ -13,7 +14,7 @@ import EventCard from '@/components/game/EventCard'
 //  import FlashResult from '@/components/game/FlashResult'
 import Slide from '@/components/slide/SlideShow'
 export default {
-  name: 'Mk11Section',
+  name: 'DbfzSection',
   components: {
     SubMenu,
     Slide,
@@ -22,16 +23,6 @@ export default {
   },
   data() {
     return {
-      game: {
-        menu: {
-          home: 'Accueil',
-          events: 'Tournois',
-          ranking: 'Ranking',
-          vods: 'VODs',
-          news: 'News',
-          logoUrl: ' DBFZ_Logo.png',
-        },
-      },
       event: {
         name: 'DBFZ Utimate Fire',
         mainCard: 'Kobi Vs. Actunoon',
@@ -83,7 +74,16 @@ export default {
           },
         },
       },
+      apiMenu: '',
     }
+  },
+  created() {
+    this.api()
+  },
+  methods: {
+    api() {
+      return (this.apiMenu = this.$store.getters['api/dbfzApi'])
+    },
   },
 }
 </script>

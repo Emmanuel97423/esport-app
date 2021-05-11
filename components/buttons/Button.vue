@@ -27,7 +27,7 @@ export default {
 <style scoped>
 .button {
   font-family: 'Roboto';
-  
+
   font-weight: 700;
   font-style: italic;
 }
@@ -42,5 +42,6 @@ export default {
 .button.white {
   color: black;
   background-color: transparent;
+  border: 1px solid black;
 }
 </style>
