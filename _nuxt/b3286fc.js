@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{343:function(e,n,t){"use strict";t.r(n);var l={},c=t(7),component=Object(c.a)(l,(function(){var e=this,n=e.$createElement;return(e._self._c||n)("div",[e._v("allgames section")])}),[],!1,null,null,null);n.default=component.exports}}]);
