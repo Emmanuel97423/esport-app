@@ -131,4 +131,54 @@ export default () => ({
       },
     },
   ],
+  ranking: [
+    {
+      id: 'a',
+      game: 'Dragon Ball Fighterz',
+      rank: {
+        1: 'Shapeless Kobi',
+        2: 'Actunoon',
+        3: 'Driver',
+        4: 'Struggle',
+        5: 'Rekwon',
+        6: 'K-The Supreme',
+      },
+    },
+    {
+      id: 'b',
+      game: 'Mortal Kombat 11',
+      rank: {
+        1: 'Mr 5000',
+        2: 'MarkTheShark',
+        3: 'Ai KillJoy',
+        4: 'ValveOverkill',
+        5: 'BOG',
+        6: 'Ze TheJanitor',
+      },
+    },
+    {
+      id: 'c',
+      game: 'Tekken 7',
+      rank: {
+        1: 'Mr 5000',
+        2: 'MarkTheShark',
+        3: 'Ai KillJoy',
+        4: 'ValveOverkill',
+        5: 'BOG',
+        6: 'Ze TheJanitor',
+      },
+    },
+    {
+      id: 'd',
+      game: 'Smash Ultimate',
+      rank: {
+        1: 'Mr 5000',
+        2: 'MarkTheShark',
+        3: 'Ai KillJoy',
+        4: 'ValveOverkill',
+        5: 'BOG',
+        6: 'Ze TheJanitor',
+      },
+    },
+  ],
 })
