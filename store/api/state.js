@@ -148,7 +148,7 @@ export default () => ({
       id: 'b',
       game: 'Mortal Kombat 11',
       rank: {
-        1: 'Mr 5000',
+        1: 'Illusion Mr5000',
         2: 'MarkTheShark',
         3: 'Ai KillJoy',
         4: 'ValveOverkill',
@@ -160,7 +160,7 @@ export default () => ({
       id: 'c',
       game: 'Tekken 7',
       rank: {
-        1: 'Mr 5000',
+        1: 'Illusion Mr5000',
         2: 'MarkTheShark',
         3: 'Ai KillJoy',
         4: 'ValveOverkill',
@@ -170,9 +170,9 @@ export default () => ({
     },
     {
       id: 'd',
-      game: 'Smash Ultimate',
+      game: 'Smash Bros Ultimate',
       rank: {
-        1: 'Mr 5000',
+        1: 'Illusion Mr5000',
         2: 'MarkTheShark',
         3: 'Ai KillJoy',
         4: 'ValveOverkill',

@@ -7,8 +7,8 @@
       <TopNavBarResponsive v-if="$mq === 'sm'"></TopNavBarResponsive>
       <TopNavBarResponsive v-if="$mq === 'md'"></TopNavBarResponsive>
     </div>
+    <div class="box__app--nuxt"><Nuxt /></div>
 
-    <Nuxt />
     <div class="box__blog">
       <BlogBlock></BlogBlock>
     </div>
@@ -99,5 +99,10 @@ html {
 .box__blog {
   display: flex;
   justify-content: center;
+}
+.box__app--nuxt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
