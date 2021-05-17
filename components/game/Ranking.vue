@@ -44,8 +44,22 @@ export default {
   display: flex;
   gap: 8rem;
   width: 100%;
+  transition: all 1s ease-in-out;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 2rem;
+  }
   &__content {
     margin: 2rem 0 0 0;
+
+    @media (max-width: 768px) {
+      border-bottom: 1px solid #37364c;
+      padding: 0 0 0.2rem 0;
+      &--img {
+        transition: all 1s ease-in-out;
+        transform: translateY(-20%);
+      }
+    }
 
     &--title {
       text-transform: uppercase;
@@ -53,12 +67,18 @@ export default {
       font-weight: bold;
       color: red;
       margin: 0 0 1rem 0;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
     }
     &--subtitle {
       text-transform: uppercase;
       font-size: 1.8rem;
       font-weight: bold;
       max-width: 50%;
+      @media (max-width: 768px) {
+        max-width: 100%;
+      }
     }
     &--text {
       margin: 0.2rem 0 1rem 0;
@@ -69,6 +89,9 @@ export default {
     }
     &--list {
       margin: 1.5rem 0 0 0;
+      @media (max-width: 768px) {
+        transform: translateY(-30%);
+      }
     }
     &--list-rank {
       display: flex;

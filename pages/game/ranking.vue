@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>Ranking</h1>
+    <h1>Ranking <span>versus fighting</span></h1>
     <div class="box"><Ranking></Ranking></div>
   </div>
 </template>
@@ -32,6 +32,9 @@ export default {
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: bold;
+    span {
+      color: #585b63;
+    }
   }
 }
 </style>

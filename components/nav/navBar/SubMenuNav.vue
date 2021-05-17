@@ -12,7 +12,9 @@
         <div class="sub-menu flex relative w-11/12 h-full items-center gap-8">
           <NuxtLink class="link" to="#">{{ apiMenu.menu.home }}</NuxtLink>
           <NuxtLink class="link" to="#">{{ apiMenu.menu.events }}</NuxtLink>
-          <NuxtLink class="link" to="#">{{ apiMenu.menu.ranking }}</NuxtLink>
+          <NuxtLink class="link" to="/game/ranking">{{
+            apiMenu.menu.ranking
+          }}</NuxtLink>
           <NuxtLink class="link" to="#">{{ apiMenu.menu.vods }}</NuxtLink>
           <NuxtLink class="link" to="#">{{ apiMenu.menu.news }}</NuxtLink>
         </div>

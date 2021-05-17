@@ -57,6 +57,9 @@ export default {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
   &__img {
     width: 100%;
 
