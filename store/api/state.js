@@ -134,7 +134,7 @@ export default () => ({
   ranking: [
     {
       id: 'a',
-      game: 'Dragon Ball Fighterz',
+      game: 'Dbfz',
       rank: {
         1: 'Shapeless Kobi',
         2: 'Actunoon',
@@ -170,7 +170,7 @@ export default () => ({
     },
     {
       id: 'd',
-      game: 'Smash Bros Ultimate',
+      game: 'Smash Bros',
       rank: {
         1: 'Illusion Mr5000',
         2: 'MarkTheShark',
