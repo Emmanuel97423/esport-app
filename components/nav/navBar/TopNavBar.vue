@@ -31,7 +31,7 @@
           <button class="self-center text-white">search</button>
           <icon class="self-center text-white">icon</icon>
           <div class="flex gap-2">
-            <Button>Connexion</Button>
+            <NuxtLink to="/login"><Button>Connexion</Button></NuxtLink>
             <Button v-if="$mq === 'lg'" type="red-gradient">S'inscrire</Button>
           </div>
         </div>
@@ -81,6 +81,12 @@ export default {
         },
       },
     }
+  },
+  methods: {
+    login() {
+      console.log('Hello login')
+      this.$router.push('login')
+    },
   },
 }
 </script>
