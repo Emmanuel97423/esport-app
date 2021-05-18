@@ -10,5 +10,7 @@
   background-image: url('@/assets/images/background/login/tekken7.png');
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: space-between;
 }
 </style>
