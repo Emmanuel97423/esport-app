@@ -67,13 +67,14 @@ export default {
       font-weight: bold;
       color: red;
       margin: 0 0 1rem 0;
+      max-width: 100%;
       @media (max-width: 768px) {
         font-size: 1rem;
       }
     }
     &--subtitle {
       text-transform: uppercase;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       font-weight: bold;
       max-width: 50%;
       @media (max-width: 768px) {
