@@ -4,9 +4,13 @@
       <div class="box__title--logo">
         <VulcainLogo></VulcainLogo>
       </div>
-      <div class="box__title--signin">Connexion</div>
+      <div class="box__title--signin">S'inscrire</div>
     </div>
     <div class="box__input">
+      <div class="box__input--label">
+        <label class="box__label" for="email">Pseudo *</label>
+        <input name="pseudo" type="text" />
+      </div>
       <div class="box__input--label">
         <label class="box__label" for="email">Email *</label>
         <input name="email" type="email" />
@@ -14,19 +18,16 @@
       <div class="box__input--label">
         <label class="box__label" for="password">Mot de passe *</label>
         <input name="password" type="password" />
-        <div class="box__input--link">
-          <a href="#">Mot de passe oublié ? Cliquez ici</a>
-        </div>
       </div>
     </div>
     <div class="box__btn--signin">
       <Button type="red__large--login" class="box__btn btn__red"
-        >Connexion</Button
+        >Inscription</Button
       >
-      <div class="signup__text">Pas de compte ?</div>
-      <NuxtLink to="/auth/signup">
+      <div class="signup__text">Déjà un compte ?</div>
+      <NuxtLink to="/auth/login">
         <Button type="white__large--login" class="box__btn btn__white"
-          >Créer un compte</Button
+          >Connexion</Button
         ></NuxtLink
       >
     </div>
@@ -52,7 +53,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 33%;
-  height: 75vh;
+  height: 85vh;
   margin: 4rem 0 0 4rem;
   border-radius: 5px;
   //Responsive

@@ -24,6 +24,7 @@ export default {
   css: [
     '~assets/scss/colors.scss',
     '~assets/scss/fonts.scss',
+    '~assets/scss/queries.scss',
     '@fortawesome/fontawesome-svg-core/styles.css',
   ],
 

@@ -1,5 +1,9 @@
 <template>
-  <div><img src="@/assets/images/logo.png" alt="logo" /></div>
+  <div>
+    <NuxtLink to="/"
+      ><img src="@/assets/images/logo.png" alt="logo"
+    /></NuxtLink>
+  </div>
 </template>
 
 <script>

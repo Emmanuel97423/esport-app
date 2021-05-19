@@ -1,17 +1,17 @@
 <template>
   <div class="box">
-    <Login></Login>
+    <Signup></Signup>
   </div>
 </template>
 
 <script>
-import Login from '@/components/auth/Login'
+import Signup from '@/components/auth/Signup'
 export default {
   components: {
-    Login,
+    Signup,
   },
   layout(context) {
-    return 'login'
+    return 'auth'
   },
 }
 </script>
