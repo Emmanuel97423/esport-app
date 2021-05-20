@@ -52,19 +52,19 @@ export default {
   align-items: center;
   justify-content: center;
   width: 33%;
-  height: 75vh;
-  margin: 4rem 0 0 4rem;
-  border-radius: 5px;
+  height: 100vh;
+
+  padding: 0;
+
+  overflow: auto;
   //Responsive
   @include media-max('phone-up') {
     width: 80%;
     margin: 0;
-    height: 95vh;
   }
   @include media-max('tablet-up') {
     width: 80%;
     margin: 0;
-    height: 85vh;
   }
   &__title {
     width: 60%;
@@ -78,15 +78,10 @@ export default {
     gap: 2rem;
     text-transform: uppercase;
     font-size: 1.5rem;
+    @include media-max('phone-up') {
+    }
     &--logo {
       width: 100px;
-      @include media-max('tablet-up') {
-        width: 100px;
-      }
-      @include media-max('phone-up') {
-        width: 60px;
-        transform: translateY(50%);
-      }
     }
   }
   &__input {
@@ -120,6 +115,9 @@ export default {
     flex-direction: column;
     justify-content: center;
     width: 70%;
+    @include media-max('phone-up') {
+      margin: 2rem 0 0 0;
+    }
   }
 }
 
