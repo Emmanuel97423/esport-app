@@ -12,6 +12,7 @@
   background-size: cover;
   display: flex;
   justify-content: space-between;
+
   //Responsive
   @include media-max('phone-up') {
     justify-content: center;

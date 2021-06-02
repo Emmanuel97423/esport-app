@@ -53,25 +53,26 @@ export default {
   align-items: center;
   justify-content: center;
   width: 33%;
-  height: 85vh;
-  margin: 4rem 0 0 4rem;
-  border-radius: 5px;
+  height: 100vh;
+  padding: 0;
+
+  overflow-y: auto;
+
   //Responsive
   @include media-max('phone-up') {
     width: 80%;
     margin: 0;
-    height: 95vh;
+    height: 100vh;
   }
   @include media-max('tablet-up') {
     width: 80%;
     margin: 0;
-    height: 85vh;
   }
   &__title {
     width: 60%;
     height: 25vh;
     color: white;
-    margin: 0 0 1rem 0;
+    padding: 0 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,14 +80,16 @@ export default {
     gap: 2rem;
     text-transform: uppercase;
     font-size: 1.5rem;
+    @include media-max('phone-up') {
+      gap: 0.5rem;
+    }
     &--logo {
       width: 100px;
       @include media-max('tablet-up') {
         width: 100px;
       }
       @include media-max('phone-up') {
-        width: 60px;
-        transform: translateY(50%);
+        width: 40px;
       }
     }
   }
@@ -116,7 +119,7 @@ export default {
     font-size: 0.8rem;
   }
   &__btn--signin {
-    margin: 4rem 0 4rem 0;
+    padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
