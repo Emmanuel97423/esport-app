@@ -9,11 +9,11 @@
     <div class="box__input">
       <div class="box__input--label">
         <label class="box__label" for="email">Pseudo *</label>
-        <input name="pseudo" type="text" />
+        <input v-model="user.pseudo" name="pseudo" type="text" />
       </div>
       <div class="box__input--label">
         <label class="box__label" for="email">Email *</label>
-        <input name="email" type="email" />
+        <input v-model="user.email" name="email" type="email" />
       </div>
       <div class="box__input--label">
         <label class="box__label" for="password">Mot de passe *</label>
@@ -21,9 +21,13 @@
       </div>
     </div>
     <div class="box__btn--signin">
-      <Button type="red__large--login" class="box__btn btn__red"
+      <Button
+        type="red__large--login"
+        class="box__btn btn__red"
+        @click="signup()"
         >Inscription</Button
       >
+      <button @click="signup">signup</button>
       <div class="signup__text">Déjà un compte ?</div>
       <NuxtLink to="/auth/login">
         <Button type="white__large--login" class="box__btn btn__white"
@@ -42,6 +46,28 @@ export default {
   components: {
     Button,
     VulcainLogo,
+  },
+  data() {
+    return {
+      user: {
+        pseudo: '',
+        email: '',
+        password: '',
+      },
+    }
+  },
+  methods: {
+    async signup() {
+      const userData = await this.$axios
+        .$post('http://localhost:8000/api/auth/signup', this.user)
+        .then((res) => {
+          this.data = userData
+          this.$router.push('/')
+        })
+        .catch((res) => {
+          console.log(res)
+        })
+    },
   },
 }
 </script>
