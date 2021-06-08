@@ -1,50 +1,34 @@
 <template>
   <div class="box">
     <div class="box__title">
-      <div class="box__title--logo">
-        <VulcainLogo></VulcainLogo>
-      </div>
       <div class="box__title--signin">Connexion</div>
+      <div class="box__title--logo"></div>
     </div>
-    <div class="box__input">
-      <div class="box__input--label">
-        <label class="box__label" for="email">Email *</label>
-        <input name="email" type="email" />
-      </div>
-      <div class="box__input--label">
-        <label class="box__label" for="password">Mot de passe *</label>
-        <input name="password" type="password" />
-        <div class="box__input--link">
-          <a href="#">Mot de passe oublié ? Cliquez ici</a>
-        </div>
-      </div>
+    <div class="box__title--input">
+      <input type="email" />
+      <input type="password" />
     </div>
     <div class="box__btn--signin">
-      <Button type="red__large--login" class="box__btn btn__red"
-        >Connexion</Button
-      >
+      <Button class="btn__red"></Button>
       <div class="signup__text">Pas de compte ?</div>
-      <NuxtLink to="/auth/signup">
-        <Button type="white__large--login" class="box__btn btn__white"
-          >Créer un compte</Button
-        ></NuxtLink
-      >
+      <Button class="btn__white"></Button>
     </div>
   </div>
 </template>
 
 <script>
 import Button from '@/components/buttons/Button'
-import VulcainLogo from '@/components/Logo'
 export default {
   name: 'Login',
   components: {
     Button,
-    VulcainLogo,
   },
 }
 </script>
 <style lang="scss" scoped>
+<<<<<<< HEAD
+
+=======
 .box {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -145,4 +129,5 @@ export default {
     margin: 0 0 0 20px;
   }
 }
+>>>>>>> ede59cedaff99e20d7768a7ab62167bd033ceb9c
 </style>
