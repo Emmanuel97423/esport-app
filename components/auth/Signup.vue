@@ -17,17 +17,17 @@
       </div>
       <div class="box__input--label">
         <label class="box__label" for="password">Mot de passe *</label>
-        <input name="password" type="password" />
+        <input v-model="user.password" name="password" type="password" />
       </div>
     </div>
     <div class="box__btn--signin">
       <Button
         type="red__large--login"
         class="box__btn btn__red"
-        @click="signup()"
+        @click.native="signup"
         >Inscription</Button
       >
-      <button @click="signup">signup</button>
+
       <div class="signup__text">Déjà un compte ?</div>
       <NuxtLink to="/auth/login">
         <Button type="white__large--login" class="box__btn btn__white"
@@ -35,17 +35,22 @@
         ></NuxtLink
       >
     </div>
+    <Alert v-if="alert.active" type="box__alert" class="alert">
+      {{ alert.message }}</Alert
+    >
   </div>
 </template>
 
 <script>
 import Button from '@/components/buttons/Button'
 import VulcainLogo from '@/components/Logo'
+import Alert from '@/components/alert/Alert'
 export default {
   name: 'Login',
   components: {
     Button,
     VulcainLogo,
+    Alert,
   },
   data() {
     return {
@@ -53,6 +58,10 @@ export default {
         pseudo: '',
         email: '',
         password: '',
+      },
+      alert: {
+        message: '',
+        active: false,
       },
     }
   },
@@ -65,7 +74,9 @@ export default {
           this.$router.push('/')
         })
         .catch((res) => {
-          console.log(res)
+          console.log(res.response.data.message)
+          this.alert.message = res.response.data.message
+          this.alert.active = true
         })
     },
   },
@@ -81,8 +92,7 @@ export default {
   width: 33%;
   height: 100vh;
   padding: 0;
-
-  overflow-y: auto;
+  overflow: hidden;
 
   //Responsive
   @include media-max('phone-up') {

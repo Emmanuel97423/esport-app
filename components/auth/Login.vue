@@ -1,34 +1,70 @@
 <template>
   <div class="box">
     <div class="box__title">
+      <div class="box__title--logo">
+        <VulcainLogo></VulcainLogo>
+      </div>
       <div class="box__title--signin">Connexion</div>
-      <div class="box__title--logo"></div>
     </div>
-    <div class="box__title--input">
-      <input type="email" />
-      <input type="password" />
+    <div class="box__input">
+      <div class="box__input--label">
+        <label class="box__label" for="email">Email *</label>
+        <input v-model="user.email" name="email" type="email" />
+      </div>
+      <div class="box__input--label">
+        <label class="box__label" for="password">Mot de passe *</label>
+        <input name="password" type="password" />
+      </div>
     </div>
     <div class="box__btn--signin">
-      <Button class="btn__red"></Button>
-      <div class="signup__text">Pas de compte ?</div>
-      <Button class="btn__white"></Button>
+      <Button type="red__large--login" class="box__btn btn__red"
+        >Connexion</Button
+      >
+      <button @click="signup">signup</button>
+      <div class="signup__text">Pas de compte compte ?</div>
+      <NuxtLink to="/auth/signup">
+        <Button type="white__large--login" class="box__btn btn__white"
+          >S'inscrire</Button
+        ></NuxtLink
+      >
     </div>
   </div>
 </template>
 
 <script>
 import Button from '@/components/buttons/Button'
+import VulcainLogo from '@/components/Logo'
 export default {
   name: 'Login',
   components: {
     Button,
+    VulcainLogo,
+  },
+  data() {
+    return {
+      user: {
+        pseudo: '',
+        email: '',
+        password: '',
+      },
+    }
+  },
+  methods: {
+    async signup() {
+      const userData = await this.$axios
+        .$post('http://localhost:8000/api/auth/signup', this.user)
+        .then((res) => {
+          this.data = userData
+          this.$router.push('/')
+        })
+        .catch((res) => {
+          console.log(res)
+        })
+    },
   },
 }
 </script>
 <style lang="scss" scoped>
-<<<<<<< HEAD
-
-=======
 .box {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
@@ -37,14 +73,15 @@ export default {
   justify-content: center;
   width: 33%;
   height: 100vh;
-
   padding: 0;
 
-  overflow: auto;
+  overflow-y: auto;
+
   //Responsive
   @include media-max('phone-up') {
     width: 80%;
     margin: 0;
+    height: 100vh;
   }
   @include media-max('tablet-up') {
     width: 80%;
@@ -54,7 +91,7 @@ export default {
     width: 60%;
     height: 25vh;
     color: white;
-    margin: 0 0 1rem 0;
+    padding: 0 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,9 +100,16 @@ export default {
     text-transform: uppercase;
     font-size: 1.5rem;
     @include media-max('phone-up') {
+      gap: 0.5rem;
     }
     &--logo {
       width: 100px;
+      @include media-max('tablet-up') {
+        width: 100px;
+      }
+      @include media-max('phone-up') {
+        width: 40px;
+      }
     }
   }
   &__input {
@@ -94,14 +138,11 @@ export default {
     font-size: 0.8rem;
   }
   &__btn--signin {
-    margin: 4rem 0 4rem 0;
+    padding: 4rem 0 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 70%;
-    @include media-max('phone-up') {
-      margin: 2rem 0 0 0;
-    }
   }
 }
 
@@ -129,5 +170,4 @@ export default {
     margin: 0 0 0 20px;
   }
 }
->>>>>>> ede59cedaff99e20d7768a7ab62167bd033ceb9c
 </style>
