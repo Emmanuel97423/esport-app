@@ -30,7 +30,11 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['~/plugins/fontawesome.js', '~/plugins/bracketsViewer.client.js'],
+  plugins: [
+    '~/plugins/fontawesome.js',
+    '~/plugins/bracketsViewer.client.js',
+    '~/plugins/auth.client',
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -70,8 +74,19 @@ export default {
   content: {},
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-
+  build: {
+    Loaders: {
+      limit: 0,
+    },
+  },
+  publicRuntimeConfig: {
+    auth: {
+      cookieName: 'idToken',
+      clientId:
+        '938819892013-b1qb6cpgn6mltrht19nf4i4lamdla786.apps.googleusercontent.com',
+    },
+  },
+  privateRuntimeConfig: {},
   //PLUGIN SASS
   styleResources: {
     scss: ['./assets/scss/*.scss'],

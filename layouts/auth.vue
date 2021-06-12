@@ -3,6 +3,13 @@
     <Nuxt />
   </div>
 </template>
+<script>
+export default {
+  created() {
+    console.log('Created:', this.$config.test1, this.$config.test2)
+  },
+}
+</script>
 <style lang="scss" scoped>
 .box {
   width: 100%;

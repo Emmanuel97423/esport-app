@@ -34,6 +34,7 @@
           >Connexion</Button
         ></NuxtLink
       >
+      <div id="googleButton"></div>
     </div>
     <Alert v-if="alert.active" type="box__alert" class="alert">
       {{ alert.message }}</Alert
@@ -83,6 +84,9 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+#googleButton {
+  color: white;
+}
 .box {
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
