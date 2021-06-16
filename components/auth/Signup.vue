@@ -34,14 +34,15 @@
           >Connexion</Button
         ></NuxtLink
       >
-      <div id="googleButton"></div>
     </div>
     <Alert v-if="alert.active" type="box__alert" class="alert">
       {{ alert.message }}</Alert
     >
   </div>
 </template>
-
+<script>
+export default {}
+</script>
 <script>
 import Button from '@/components/buttons/Button'
 import VulcainLogo from '@/components/Logo'

@@ -32,8 +32,11 @@
           <button class="self-center text-white">search</button>
           <icon class="self-center text-white">icon</icon>
           <div class="flex gap-2">
-            <NuxtLink to="/auth/login"><Button>Connexion</Button></NuxtLink>
-            <Button v-if="$mq === 'lg'" type="red-gradient">S'inscrire</Button>
+            <div v-show="!isLoggedIn" id="googleButton" class="avatar"></div>
+
+            <template v-if="isLoggedIn">
+              <img :src="user.profileUrl" class="avatar" />
+            </template>
           </div>
         </div>
       </div>
@@ -43,13 +46,13 @@
 
 <script>
 import VulcainLogo from '@/components/Logo'
-import Button from '@/components/buttons/Button'
+
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 export default {
   name: 'TopNavBar',
   components: {
     VulcainLogo,
-    Button,
+
     'font-awesome-icon': FontAwesomeIcon,
   },
   data() {
@@ -87,6 +90,14 @@ export default {
     login() {
       console.log('Hello login')
       this.$router.push('login')
+    },
+  },
+  computed: {
+    user() {
+      return this.$store.state.auth.user
+    },
+    isLoggedIn() {
+      return this.$store.state.auth.isLoggedIn
     },
   },
 }
@@ -174,5 +185,9 @@ input {
   align-self: center;
   justify-self: flex-start;
   left: 0;
+}
+.avatar {
+  width: 2.2rem;
+  border-radius: 50%;
 }
 </style>
