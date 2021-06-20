@@ -34,6 +34,7 @@ export default {
     '~/plugins/fontawesome.js',
     '~/plugins/bracketsViewer.client.js',
     '~/plugins/auth.client',
+    '~/plugins/vCalendar.client',
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
